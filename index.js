@@ -52,7 +52,7 @@ Person.prototype.eat = function(edible){
 Person.prototype.poop = function(){
  this.stomach = [];
 }
-
+//stuck on this last part -_-
 const name = new Person ("Neo");
 const age = new Person (20);
 
@@ -115,10 +115,13 @@ Baby.prototype.poop = function(){
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding-- Error will pop up if not "binding" correctly.
+
+  2. Implicit Binding-- Look to the left of the dot.
+
+  3. Explicit Binding-- uses (.bind, .apply, or .call)Call will immediately invoke the function and you pass in your arguments 1 by 1. Apply will immediately invoke the function and you pass in your arguments as an array. Bind you pass in your arguments 1 by 1, but it will not immediately invoke the function, instead it returns a brand new function that can be invoked later.
+
+  4. New Binding-- is one that keeps eluding me, new binding happens when a function is inviled as a constructor function using the new keyword. What was just created was the new Binding
 */
 
 
