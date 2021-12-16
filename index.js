@@ -56,7 +56,7 @@ Person.prototype.poop = function(){
 const name = new Person ("Neo");
 const age = new Person (20);
 
-//console.log(name, age);
+//return `${this.name}, ${this.age}`;
   
 
 
@@ -94,10 +94,23 @@ return this.tank += gallons;
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
- 
+function Baby(name, age, favoriteToy) {
+  this.name = name;
+  this.age = age;
+  this.favoriteToy = favoriteToy;
 }
+Baby.prototype.play = function(play){
+  return `Playing with ${this.favoriteToy}`;
 
+}
+Baby.prototype.eat = function(edible){
+  if(this.stomach.length < 10){
+    this.stomach.push(edible);
+  }
+}
+Baby.prototype.poop = function(){
+ this.stomach = [];
+}
 
 /* 
   TASK 4
